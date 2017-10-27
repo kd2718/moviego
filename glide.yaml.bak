@@ -1,3 +1,4 @@
-package: github.com/kd2718/goplay
+package: .
 import:
 - package: github.com/go-redis/redis
+  version: ~6.7.2
