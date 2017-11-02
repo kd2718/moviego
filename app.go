@@ -32,7 +32,6 @@ func main() {
 		DB:       0,  // use default DB
 	})
 	client.FlushDB()
-	client.Set("counter", 0)
 
 	fmt.Println("Starting service")
 	pong, err := client.Ping().Result()
