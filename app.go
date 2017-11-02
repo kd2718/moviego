@@ -26,11 +26,13 @@ func handler(w http.ResponseWriter, r *http.Request) {
 
 func main() {
 
-	client := redis.NewClient(&redis.Options{
+	client = redis.NewClient(&redis.Options{
 		Addr:     "redis:6379",
 		Password: "", // no password set
 		DB:       0,  // use default DB
 	})
+	client.FlushDB()
+	client.Set("counter", 0)
 
 	fmt.Println("Starting service")
 	pong, err := client.Ping().Result()
