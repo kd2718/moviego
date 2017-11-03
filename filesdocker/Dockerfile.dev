@@ -1,11 +1,11 @@
 FROM golang:alpine 
 #RUN mkdir /app 
-RUN apk update
+#RUN apk update
 RUN apk add --no-cache curl
 RUN apk add --no-cache libcurl
 RUN apk add --no-cache libssh2
-RUN apk add --no-cache bash
-RUN apk add --no-cache bind
+#RUN apk add --no-cache bash
+#RUN apk add --no-cache bind
 ADD . /go/src/github.com/kd2718/goplay
 #VOLUME [ "/app" ]
 RUN curl https://glide.sh/get | sh
