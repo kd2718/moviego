@@ -27,11 +27,11 @@ services:
     networks:
       - webnet
   redis:
-    image: redis
+    image: redis:alpine
     ports:
       - "6379:6379"
-    volumes:
-      - /home/docker/data:/data
+    #volumes:
+    #  - /home/docker/data:/data
     deploy:
       placement:
         constraints: [node.role == manager]
